@@ -1,0 +1,11 @@
+---
+# Install central manager
+- name: Install HTCondor Central Manager
+  hosts: local
+  roles:
+     - role: geonmo.ansible_htcondor
+       condor_admin: "admin@vm01"
+       condor_daemon_list: "MASTER, COLLECTOR, NEGOTIATOR"
+       condor_domain: "intranet.local"
+       condor_host: "node1.intranet.local"
+       condor_name: "HTCondor Cluster" 
