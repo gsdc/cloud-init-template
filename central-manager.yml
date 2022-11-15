@@ -8,10 +8,10 @@
      - role: geonmo.ansible_htcondor
        step: "config"
        condor_version: "9.0"
-       condor_admin: "admin@s01-a01-02-latter.cluster.io"
+       condor_admin: "admin@ce01.cluster.io"
        condor_daemon_list: "MASTER, COLLECTOR, NEGOTIATOR"
        condor_domain: "cluster.io"
-       condor_host: "s01-a01-02-latter.cluster.io"
+       condor_host: "ce01.cluster.io"
        condor_name: "HTCondor Cluster"
        enable_dynamicslot: true
         
