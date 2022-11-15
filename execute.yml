@@ -14,4 +14,4 @@
        condor_host: "ce01.cluster.lo"
        condor_name: "HTCondor Cluster"
        enable_dynamicslot: true
-        
+       enable_singularity: true 
