@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo yum update -y ansible
+sudo yum install -y ansible
 
 
 ansible-galaxy role install geerlingguy.repo-epel
