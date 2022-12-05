@@ -1,0 +1,13 @@
+- name: Setup local condor WN
+  hosts: localhost
+  connection: local
+  vars_files:
+    - vars/main.yml
+  roles:
+    - role: geonmo.ansible_htcondor
+      condor_admin: "admin@condorce.cluster.lo"
+      condor_daemon_list: "MASTER, STARTD"
+      condor_domain: "cluster.lo"
+      condor_host: "condorce.cluster.lo"
+      condor_name: "HTCondor Cluster"
+      enable_dynamicslot: true
