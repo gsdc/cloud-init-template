@@ -21,6 +21,7 @@
       cvmfs_repositories:
         - repository: oasis.opensciencegrid.org
           key_dir: /etc/cvmfs/keys/opensciencegrid.org
+          client_options: []
       cvmfs_server_urls:
         - domain: opensciencegrid.org
           urls: 
@@ -28,15 +29,4 @@
             - "http://cvmfs-s1fnal.opensciencegrid.org:8000/cvmfs/@fqrn@"
             - "http://cvmfs-s1goc.opensciencegrid.org:8000/cvmfs/@fqrn@"
       cvmfs_manage_firewall: true
-      cvmfs_keys:
-        - path: /etc/cvmfs/keys/opensciencegrid.org/opensciencegrid.org.pub
-          key: |
-            -----BEGIN PUBLIC KEY-----
-            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqQGYXTp9cRcMbGeDoijB
-            gKNTCEpIWB7XcqIHVXJjfxEkycQXMyZkB7O0CvV3UmmY2K7CQqTnd9ddcApn7BqQ
-            /7QGP0H1jfXLfqVdwnhyjIHxmV2x8GIHRHFA0wE+DadQwoi1G0k0SNxOVS5qbdeV
-            yiyKsoU4JSqy5l2tK3K/RJE4htSruPCrRCK3xcN5nBeZK5gZd+/ufPIG+hd78kjQ
-            Dy3YQXwmEPm7kAZwIsEbMa0PNkp85IDkdR1GpvRvDMCRmUaRHrQUPBwPIjs0akL+
-            qoTxJs9k6quV0g3Wd8z65s/k5mEZ+AnHHI0+0CL3y80wnuLSBYmw05YBtKyoa1Fb
-            FQIDAQAB
-            -----END PUBLIC KEY-----
+
