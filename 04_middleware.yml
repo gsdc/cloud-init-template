@@ -4,6 +4,7 @@
   vars_files:
     - vars/main.yml
   roles:
+    - role: geerlingguy.repo-epel
     - role: geonmo.grid
       grid_middleware: "OSG"
       grid_dummy_host_certificate: true

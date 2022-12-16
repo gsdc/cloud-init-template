@@ -4,10 +4,29 @@
   vars_files:
     - vars/main.yml
   roles:
-    - role: geonmo.ansible_htcondor
+    - role: geonmo.htcondor
       condor_admin: "admin@condorce.cluster.lo"
       condor_daemon_list: "MASTER, STARTD"
       condor_domain: "cluster.lo"
       condor_host: "condorce.cluster.lo"
       condor_name: "HTCondor Cluster"
       enable_dynamicslot: true
+    - role: galaxyproject.cvmfs
+      cvmfs_role: client
+      cvmfs_http_proxies: 
+        - "DIRECT"
+        #- "http://cms-squid.sdfarm.kr:3128"
+        #- "http://cms-squid2.sdfarm.kr:3128"
+      cvmfs_quota_limit: 80000
+      cvmfs_repositories:
+        - repository: oasis.opensciencegrid.org
+          key_dir: /etc/cvmfs/keys/opensciencegrid.org
+          client_options: []
+      cvmfs_server_urls:
+        - domain: opensciencegrid.org
+          urls: 
+            - "http://cvmfs-s1bnl.opensciencegrid.org:8000/cvmfs/@fqrn@"
+            - "http://cvmfs-s1fnal.opensciencegrid.org:8000/cvmfs/@fqrn@"
+            - "http://cvmfs-s1goc.opensciencegrid.org:8000/cvmfs/@fqrn@"
+      cvmfs_manage_firewall: true
+

@@ -9,7 +9,7 @@
       htcondor_ce_batch_system: condor
       htcondor_ce_lrms_collector: "condorce.cluster.lo"
       htcondor_ce_uid_domain: "{{ ansible_domain }}"
-    - role: geonmo.ansible_htcondor
+    - role: geonmo.htcondor
       condor_version: "9.0"
       condor_admin: "admin@condorce.cluster.lo"
       condor_daemon_list: "MASTER, NEGOTIATOR, COLLECTOR, SCHEDD"
